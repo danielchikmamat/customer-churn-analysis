@@ -1,5 +1,4 @@
 
-from file import load_csv, save_data
 import pandas as pd
 import re
 
@@ -153,50 +152,39 @@ def check_missing_values(df):
         print(missing_values)
 
 
-# Example usage
-if __name__ == "__main__":
-    df = load_csv()
-    print(f"raw data length: {len(df)}")
-
-    df = clean_column_names(df)
-    print(f"Cleaned column names: {df.columns.tolist()}")
+def processing(df):
+        df = clean_column_names(df)
+        print(f"Cleaned column names: {df.columns.tolist()}")
+        
+        #check for missing values and data types  before any data cleaning
+        check_missing_values(df)
+        check_data_types(df)
     
-    #check for missing values, data types, and class balance before any data cleaning
-    check_missing_values(df)
-    check_data_types(df)
-    check_churn_class_balance(df)
-
-    #handle missing values and remove duplicates before any analysis
-    df = fix_missing_total_charges(df)
-    df = remove_duplicates(df)
-
-    #fix string consistency before binary encoding and one-hot encoding
-    df = lowercase_string_and_whitespace_columns(df)
-
-    #convert columns with 2 unique values to binary encoding
-    binary_columns = binary_encoding_columns(df)
-    print(f"Columns suitable for binary encoding: {binary_columns}")
-    df = convert_yes_no_to_binary(df)
-    df = convert_gender_to_binary(df)
-    df = convert_senior_citizen_to_binary(df)
-
-    #convert 3 options to binary if dependent on internet service or phoneservice
-    df = convert_multiple_lines_to_binary(df)
-    df = convert_internet_dependent_columns_to_binary(df)
-
-    df = convert_column_to_one_hot(df, "internet_service")
-    df = convert_column_to_one_hot(df, "contract")
-    df = convert_column_to_one_hot(df, "payment_method")
-
-    #drop uselss columns after encoding
-    df = drop_customer_id(df)
+        #handle missing values and remove duplicates before any analysis
+        df = fix_missing_total_charges(df)
+        df = remove_duplicates(df)
     
-    print(df.columns.tolist())
+        #fix string consistency before binary encoding and one-hot encoding
+        df = lowercase_string_and_whitespace_columns(df)
     
-    save_data(df)
+        #convert columns with 2 unique values to binary encoding
+        binary_columns = binary_encoding_columns(df)
+        print(f"Columns suitable for binary encoding: {binary_columns}")
+        df = convert_yes_no_to_binary(df)
 
+        #convert 3 options to binary if dependent on internet service or phoneservice
+        df = convert_multiple_lines_to_binary(df)
+        df = convert_internet_dependent_columns_to_binary(df)
 
-    
+        df = convert_column_to_one_hot(df, "internet_service")
+        df = convert_column_to_one_hot(df, "contract")
+        df = convert_column_to_one_hot(df, "payment_method")
+
+        #drop uselss columns after encoding
+        df = drop_customer_id(df)
+
+        return df
+
     
 
 
