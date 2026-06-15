@@ -100,9 +100,18 @@ def preprocess(df: pd.DataFrame) -> tuple[np.ndarray, pd.Series, list[str]]:
     # coerce — catches cases like TotalCharges loaded as str
     X = X.apply(pd.to_numeric, errors="coerce")
 
+    # drop rows where total_charges is NaN before any filling
+    if "total_charges" in X.columns:
+        n_drop = X["total_charges"].isnull().sum()
+        if n_drop:
+            X = X.dropna(subset=["total_charges"])
+            churn = churn.loc[X.index]
+            print(f"[preprocess] Dropped {n_drop} rows with NaN total_charges. "
+                  f"Remaining rows: {len(X)}")
+
     n_nan = X.isnull().sum().sum()
     if n_nan:
-        # NaN cells are binary service columns — "no service" → 0
+        # remaining NaN cells are binary service columns — "no service" -> 0
         print(f"[preprocess] Filling {n_nan} NaN cells with 0 "
               "(service-not-applicable columns).")
         X = X.fillna(0)
