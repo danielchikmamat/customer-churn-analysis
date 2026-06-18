@@ -25,7 +25,7 @@ for churn_val in [0, 1]:
         jitter = rng.uniform(-0.15, 0.15, n)
         ax.scatter(
             senior_val + jitter,
-            df.loc[mask, "monthly_charges"],
+            df.loc[mask, "tenure"],
             color=colors[churn_val],
             alpha=0.25,
             s=8,
@@ -35,8 +35,8 @@ for churn_val in [0, 1]:
 ax.set_xticks([0, 1])
 ax.set_xticklabels([x_labels[0], x_labels[1]], fontsize=12)
 ax.set_xlabel("Senior Citizen", fontsize=12)
-ax.set_ylabel("Monthly Charges ($)", fontsize=12)
-ax.set_title("Monthly Charges by Senior Citizen Status\ncolored by Churn", fontsize=13)
+ax.set_ylabel("Tenure (months)", fontsize=12)
+ax.set_title("Tenure by Senior Citizen Status\ncolored by Churn", fontsize=13)
 ax.legend(title="Churn", fontsize=10, title_fontsize=10)
 ax.grid(axis="y", linestyle="--", alpha=0.4)
 ax.set_xlim(-0.5, 1.5)
