@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 
-def load_csv(file_name="telco-customer-churn.csv", data_dir="raw"):
+def load_csv(file_name="telco-customer-churn.csv", data_dir="data//raw"):
     """
     Load a CSV file from the raw data folder.
 
@@ -28,7 +28,7 @@ def load_csv(file_name="telco-customer-churn.csv", data_dir="raw"):
     print(f"Loaded {file_name} with shape {df.shape}")
     return df
 
-def save_data(df, file_name="cleaned_telco_customer_churn.csv", data_dir="processed"):
+def save_data(df, file_name="cleaned_telco_customer_churn.csv", data_dir="data//processed"):
     """Save the cleaned DataFrame to a CSV file in the processed data folder."""
     file_path = os.path.join(data_dir, file_name)
     df.to_csv(file_path, index=False)
