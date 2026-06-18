@@ -10,20 +10,32 @@ Storlek: 1 758 kunder
 Churn-rate: ~10%
 
 Nyckelkarakteristika:
+Demografi:
+- Låg andel seniorer (~16%) — yngre till medelålders kundgrupp
+- Hög andel med partner (~73%) och relativt hög andel med dependents (~39%)
+- Jämn könsfördelning (51% kvinna / 49% man)
+
+Tjänster & kontrakt:
 - Längst tenure av alla kluster (~59 månader)
 - Högst total charges (~5 410) och höga månadsavgifter (~91)
-- Nästan uteslutande fiber optic-internet
-- Hög andel tvåårskontrakt (~53%)
-- Alla tilläggstjänster aktiverade: online security, backup, device protection,
-  tech support, streaming TV och movies
-- Låg andel månad-till-månad-kontrakt (~8%)
-- Betalningsmetod varierar men låg andel electronic check
+- Fiber optic (~58%) och DSL (~42%) — inga utan internet
+- Nästan alla har telefoni (~95%), varav 70% har multiple lines
+- Alla tilläggstjänster starkt aktiverade: online security (~62%),
+  backup (~71%), device protection (~74%), tech support (~67%),
+  streaming TV (~76%) och movies (~77%)
+- Hög andel tvåårskontrakt (~53%), låg andel månad-till-månad (~8%)
+
+Fakturering & betalning:
+- Paperless billing ~66%
+- Betalning jämnt fördelad mellan bank transfer (~36%) och credit card (~36%);
+  låg andel electronic check (~20%)
 
 Tolkning:
 Etablerade, höginvesterande kunder med stark inlåsning via långa kontrakt och
-många tjänster. Trots höga avgifter är churnen låg — de är nöjda och har mycket
-att förlora på att byta. Prioritet: behåll dem med proaktiv support och lojalitets-
-erbjudanden.
+många tjänster. Hög partnerandel och låg seniorandel tyder på en ekonomiskt aktiv
+livsfas med stabilt hushåll. Trots höga avgifter är churnen låg — de är nöjda
+och har mycket att förlora på att byta. Prioritet: behåll med proaktiv support
+och lojalitetserbjudanden.
 
 ---
 
@@ -32,18 +44,30 @@ Storlek: 1 521 kunder
 Churn-rate: ~7%
 
 Nyckelkarakteristika:
+Demografi:
+- Lägst andel seniorer av alla kluster (~3%) — markant yngre profil
+- Medelhög andel partner (~48%) och relativt hög andel dependents (~42%)
+- Jämn könsfördelning (49% kvinna / 51% man)
+
+Tjänster & kontrakt:
 - Mellanlång tenure (~31 månader)
 - Mycket låga månadsavgifter (~21) och total charges (~667)
-- Nästan inga internetabonnemang (99.9% "no internet service")
-- Inga tilläggstjänster (streaming, security etc.)
-- Hög andel mailed check-betalare (~48%)
-- Blandade kontraktstyper
+- 100% utan internet — enbart telefonabonnemang
+- Alla har telefoni men låg andel multiple lines (~22%)
+- Inga tilläggstjänster överhuvudtaget (streaming, security etc. = 0%)
+- Blandade kontrakt: tvåår (~42%), månad-till-månad (~34%), ettår (~24%)
+
+Fakturering & betalning:
+- Lägst paperless billing av alla kluster (~29%) — föredrar pappersräkning
+- Hög andel mailed check (~48%); låg andel electronic check (~8%)
 
 Tolkning:
-Enklast möjliga tjänst — troligen bara telefoni. Låg churn trots minimalt engagemang
-tyder på att de är nöjda med sin begränsade lösning och inte aktivt söker alternativ.
-Potential att upsella internettjänster, men försiktighet krävs för att inte störa
-en stabil kundgrupp.
+Enklast möjliga tjänst — bara telefoni, ingen digital tilläggstjänst. Den låga
+seniorandelen och höga dependent-andelen kan indikera familjer med begränsat
+behov av bredband (t.ex. barn som täcks av mobilabonnemang). Låg churn trots
+minimalt engagemang tyder på att de är nöjda. Mailed check och låg paperless
+billing pekar på kunder som föredrar traditionella kanaler. Försiktig upselling
+av internet möjlig, men riskera inte att störa en stabil kundgrupp.
 
 ---
 
@@ -52,20 +76,33 @@ Storlek: 2 078 kunder
 Churn-rate: ~55%
 
 Nyckelkarakteristika:
+Demografi:
+- Högst andel seniorer av alla kluster (~30%) — tydlig demografisk risk
+- Lägst andel partner (~38%) och lägst andel dependents (~15%)
+- Jämn könsfördelning (49% kvinna / 51% man)
+
+Tjänster & kontrakt:
 - Kort tenure (~20 månader)
 - Höga månadsavgifter (~86) men låg total charges (~1 779) relativt avgiften
-- Nästan uteslutande fiber optic (99.9%)
+- Nästan uteslutande fiber optic (99.9%), inga utan internet
+- Alla har telefoni (100%); 55% har multiple lines
+- Låg andel säkerhetstjänster: online security (~14%), tech support (~14%)
+- Måttlig streaming (~45%) och backup/device protection (~30%)
 - Överväldigande andel månad-till-månad-kontrakt (~97%)
-- Hög andel electronic check-betalare (~64%)
-- Låg andel säkerhetstjänster och tech support
-- Papperless billing ~79%
+
+Fakturering & betalning:
+- Högst paperless billing (~79%)
+- Dominant electronic check-betalare (~64%) — starkaste churnindikatorn
+- Låg andel automatiska betalningar (bank transfer ~14%, credit card ~12%)
 
 Tolkning:
 Den tydligaste churnsignalen i datasetet. Fiber optic-kunder utan kontraktsinlåsning
 som betalar mycket men får lite mervärde (inga säkerhetstjänster, inget support).
-Electronic check är en känd churnindikator. Dessa kunder är priskänsliga och lätta
-att förlora till konkurrenter. Högsta prioritet för retentionsinsatser: erbjud
-rabatterade långtidskontrakt och tilläggstjänster.
+Hög seniorandel kombinerat med ensamhushåll (låg partner- och dependent-andel)
+kan indikera priskänsliga kunder som aktivt jämför alternativ. Electronic check
+är en känd churnindikator — manuell betalning ökar medvetenheten om kostnaden
+varje månad. Högsta prioritet för retentionsinsatser: erbjud kontraktskonvertering
+och bundling av tilläggstjänster.
 
 ---
 
@@ -74,18 +111,33 @@ Storlek: 1 675 kunder
 Churn-rate: ~26%
 
 Nyckelkarakteristika:
+Demografi:
+- Låg andel seniorer (~11%)
+- Lägst andel partner (~36%) och medelhög andel dependents (~27%)
+- Jämn könsfördelning (49% kvinna / 51% man)
+
+Tjänster & kontrakt:
 - Kort tenure (~21 månader)
 - Mellanhöga månadsavgifter (~51) och låg total charges (~1 095)
-- Alla har DSL-internet (100%), ingen fiber och inget "no internet"
-- Hög andel månad-till-månad-kontrakt (~72%)
-- Måttliga tilläggstjänster (online security ~38%, tech support ~35%)
-- Blandad betalningsmetod: electronic check (~34%) och mailed check (~31%)
+- Alla har DSL (100%), ingen fiber och inget "no internet"
+- Lägst andel telefoni av alla kluster (~65%); låg andel multiple lines (~15%)
+- Måttliga tilläggstjänster: online security (~38%), tech support (~35%),
+  backup (~33%), device protection (~29%), streaming (~26–27%)
+- Hög andel månad-till-månad-kontrakt (~72%), lite tvåår (~7%)
+
+Fakturering & betalning:
+- Medelhög paperless billing (~55%)
+- Blandad betalning: electronic check (~34%) och mailed check (~31%)
+- Låg andel automatiska betalningar (bank transfer ~17%, credit card ~18%)
 
 Tolkning:
 En mellankategori med märkbart förhöjd churnrisk. DSL-kunder med korta tenures
 och månadskontrakt — antingen nyrekryterade kunder som utvärderar tjänsten eller
-missnöjda som inte uppgraderat. Retentionsstrategi: uppmuntra uppgradering till
-längre kontrakt och fler tilläggstjänster för att öka stickiness.
+missnöjda som inte uppgraderat till fiber. Lägsta telefonandelen antyder att en
+del kunder kanske bara valt bredband utan röst. Blandad betalningsprofil med
+relativt hög electronic check och mailed check pekar på manuella betalare med
+potentiellt hög prismedvetenhet. Retentionsstrategi: uppmuntra längre kontrakt
+och fler tilläggstjänster för att öka stickiness.
 
 ---
 
@@ -100,9 +152,16 @@ Starkaste churndrivarna identifierade:
   2. Kort tenure (Cluster 2 och 3)
   3. Electronic check som betalningsmetod (Cluster 2 och 3)
   4. Avsaknad av tilläggstjänster (Cluster 2)
+  5. Hög seniorandel + låg partner/dependent-andel (Cluster 2) — ensamhushåll
+
+Demografiska observationer:
+  - Kön har ingen urskiljande effekt — jämnt fördelat i alla kluster
+  - Seniorer är kraftigt överrepresenterade i högrisk-Cluster 2 (~30% vs ~3–16% övriga)
+  - Partner och dependents samvarierar med lägre churn (Cluster 0 och 1)
 
 Rekommenderade åtgärder:
-  - Cluster 2: Akut retentionsfokus — erbjud kontraktskonvertering och bundling
-  - Cluster 3: Uppgraderingsincitament från DSL + månadskontrakt
+  - Cluster 2: Akut retentionsfokus — erbjud kontraktskonvertering och bundling;
+               särskild uppmärksamhet på seniorsegmentet
+  - Cluster 3: Uppgraderingsincitament från månadskontrakt; erbjud DSL→fiber-kampanjer
   - Cluster 0: Belöna lojalitet, förebygg passivt bortfall
-  - Cluster 1: Försiktig upselling av internettjänster
+  - Cluster 1: Försiktig upselling av internettjänster via traditionella kanaler
