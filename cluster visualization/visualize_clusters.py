@@ -175,12 +175,16 @@ def plot_3d(X_scaled: np.ndarray, labels: np.ndarray,
 # Columns shown in the printed profile summary (subset of all 28 features).
 PROFILE_COLS = [
     "churn", "tenure", "monthly_charges", "total_charges",
-    "contract_month-to-month", "contract_one_year", "contract_two_year",
+    "senior_citizen", "gender_female", "gender_male",
+    "partner", "dependents",
+    "phone_service", "multiple_lines",
     "internet_service_dsl", "internet_service_fiber_optic", "internet_service_no",
+    "online_security", "online_backup", "device_protection",
+    "tech_support", "streaming_tv", "streaming_movies",
+    "paperless_billing",
+    "contract_month-to-month", "contract_one_year", "contract_two_year",
     "payment_method_bank_transfer_(automatic)", "payment_method_credit_card_(automatic)",
     "payment_method_electronic_check", "payment_method_mailed_check",
-    "online_security", "online_backup", "device_protection",
-    "tech_support", "streaming_tv", "streaming_movies", "multiple_lines",
 ]
 
 
