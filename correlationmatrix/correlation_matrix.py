@@ -18,7 +18,7 @@ import scipy.stats as stats
 HERE = pathlib.Path(__file__).parent
 DATA = HERE.parent / "data" / "processed" / "cleaned_telco_customer_churn.csv"
 
-df = pd.read_csv(DATA).drop(columns=["churn"])
+df = pd.read_csv(DATA)
 
 # ── Column classification ─────────────────────────────────────────────────────
 binary_cols  = [c for c in df.columns if df[c].dropna().isin([0, 1]).all()]
@@ -90,7 +90,7 @@ sns.heatmap(
 
 ax.set_title(
     "Correlation Matrix — Telco Customer Churn Features\n"
-    "φ for binary×binary · Pearson r otherwise · churn label excluded",
+    "φ for binary×binary · Pearson r otherwise · churn included",
     fontsize=13,
     pad=14,
 )
