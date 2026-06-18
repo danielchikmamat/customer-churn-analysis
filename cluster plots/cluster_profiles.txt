@@ -1,0 +1,108 @@
+Cluster Profile Summary
+=======================
+Källa: KMeans-klustring på kunddata, visualiserad via heatmap (z-scores, råmedelvärden annoterade).
+Antal kluster: 4 | Total kunder: 7 032
+
+---
+
+CLUSTER 0 — Lojala premiumkunder
+Storlek: 1 758 kunder
+Churn-rate: ~10%
+
+Nyckelkarakteristika:
+- Längst tenure av alla kluster (~59 månader)
+- Högst total charges (~5 410) och höga månadsavgifter (~91)
+- Nästan uteslutande fiber optic-internet
+- Hög andel tvåårskontrakt (~53%)
+- Alla tilläggstjänster aktiverade: online security, backup, device protection,
+  tech support, streaming TV och movies
+- Låg andel månad-till-månad-kontrakt (~8%)
+- Betalningsmetod varierar men låg andel electronic check
+
+Tolkning:
+Etablerade, höginvesterande kunder med stark inlåsning via långa kontrakt och
+många tjänster. Trots höga avgifter är churnen låg — de är nöjda och har mycket
+att förlora på att byta. Prioritet: behåll dem med proaktiv support och lojalitets-
+erbjudanden.
+
+---
+
+CLUSTER 1 — Lågkostnads-kunder utan internet
+Storlek: 1 521 kunder
+Churn-rate: ~7%
+
+Nyckelkarakteristika:
+- Mellanlång tenure (~31 månader)
+- Mycket låga månadsavgifter (~21) och total charges (~667)
+- Nästan inga internetabonnemang (99.9% "no internet service")
+- Inga tilläggstjänster (streaming, security etc.)
+- Hög andel mailed check-betalare (~48%)
+- Blandade kontraktstyper
+
+Tolkning:
+Enklast möjliga tjänst — troligen bara telefoni. Låg churn trots minimalt engagemang
+tyder på att de är nöjda med sin begränsade lösning och inte aktivt söker alternativ.
+Potential att upsella internettjänster, men försiktighet krävs för att inte störa
+en stabil kundgrupp.
+
+---
+
+CLUSTER 2 — Högrisk-kunder (kritisk riskgrupp)
+Storlek: 2 078 kunder
+Churn-rate: ~55%
+
+Nyckelkarakteristika:
+- Kort tenure (~20 månader)
+- Höga månadsavgifter (~86) men låg total charges (~1 779) relativt avgiften
+- Nästan uteslutande fiber optic (99.9%)
+- Överväldigande andel månad-till-månad-kontrakt (~97%)
+- Hög andel electronic check-betalare (~64%)
+- Låg andel säkerhetstjänster och tech support
+- Papperless billing ~79%
+
+Tolkning:
+Den tydligaste churnsignalen i datasetet. Fiber optic-kunder utan kontraktsinlåsning
+som betalar mycket men får lite mervärde (inga säkerhetstjänster, inget support).
+Electronic check är en känd churnindikator. Dessa kunder är priskänsliga och lätta
+att förlora till konkurrenter. Högsta prioritet för retentionsinsatser: erbjud
+rabatterade långtidskontrakt och tilläggstjänster.
+
+---
+
+CLUSTER 3 — DSL-kunder med månadskontakt
+Storlek: 1 675 kunder
+Churn-rate: ~26%
+
+Nyckelkarakteristika:
+- Kort tenure (~21 månader)
+- Mellanhöga månadsavgifter (~51) och låg total charges (~1 095)
+- Alla har DSL-internet (100%), ingen fiber och inget "no internet"
+- Hög andel månad-till-månad-kontrakt (~72%)
+- Måttliga tilläggstjänster (online security ~38%, tech support ~35%)
+- Blandad betalningsmetod: electronic check (~34%) och mailed check (~31%)
+
+Tolkning:
+En mellankategori med märkbart förhöjd churnrisk. DSL-kunder med korta tenures
+och månadskontrakt — antingen nyrekryterade kunder som utvärderar tjänsten eller
+missnöjda som inte uppgraderat. Retentionsstrategi: uppmuntra uppgradering till
+längre kontrakt och fler tilläggstjänster för att öka stickiness.
+
+---
+
+ÖVERGRIPANDE SLUTSATSER
+=======================
+
+Churn-rangordning (högst till lägst):
+  Cluster 2 (~55%) > Cluster 3 (~26%) > Cluster 0 (~10%) > Cluster 1 (~7%)
+
+Starkaste churndrivarna identifierade:
+  1. Fiber optic + månad-till-månad-kontrakt (Cluster 2)
+  2. Kort tenure (Cluster 2 och 3)
+  3. Electronic check som betalningsmetod (Cluster 2 och 3)
+  4. Avsaknad av tilläggstjänster (Cluster 2)
+
+Rekommenderade åtgärder:
+  - Cluster 2: Akut retentionsfokus — erbjud kontraktskonvertering och bundling
+  - Cluster 3: Uppgraderingsincitament från DSL + månadskontrakt
+  - Cluster 0: Belöna lojalitet, förebygg passivt bortfall
+  - Cluster 1: Försiktig upselling av internettjänster
