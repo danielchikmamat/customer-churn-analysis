@@ -39,6 +39,8 @@ except ImportError:
 # ---------------------------------------------------------------------------
 ROOT        = Path(__file__).resolve().parent.parent   # project root (one level above kmeans/)
 DEFAULT_DATA = ROOT / "data" / "processed" / "cleaned_telco_customer_churn.csv"
+PLOTS_DIR   = ROOT / "kmeans plots"
+PLOTS_DIR.mkdir(exist_ok=True)
 # ---------------------------------------------------------------------------
 
 
@@ -330,7 +332,7 @@ def main() -> None:
         )
     print(f"{'='*55}\n")
 
-    plot_results(ks, inertias, silhouettes, elbow_k, best_sil_k, ROOT)
+    plot_results(ks, inertias, silhouettes, elbow_k, best_sil_k, PLOTS_DIR)
 
 
 if __name__ == "__main__":

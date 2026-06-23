@@ -1,0 +1,167 @@
+Cluster Profile Summary
+=======================
+Source: KMeans clustering on customer data, visualized via heatmap (z-scores, raw means annotated).
+Number of clusters: 4 | Total customers: 7,032
+
+---
+
+CLUSTER 0 — Loyal Premium Customers
+Size: 1,758 customers
+Churn rate: ~10%
+
+Key characteristics:
+Demographics:
+- Low share of seniors (~16%) — younger to middle-aged customer group
+- High share with partner (~73%) and relatively high share with dependents (~39%)
+- Balanced gender split (51% female / 49% male)
+
+Services & contracts:
+- Longest tenure of all clusters (~59 months)
+- Highest total charges (~5,410) and high monthly charges (~91)
+- Fiber optic (~58%) and DSL (~42%) — none without internet
+- Almost all have phone service (~95%), of which 70% have multiple lines
+- All add-on services strongly activated: online security (~62%),
+  backup (~71%), device protection (~74%), tech support (~67%),
+  streaming TV (~76%) and movies (~77%)
+- High share of two-year contracts (~53%), low share of month-to-month (~8%)
+
+Billing & payment:
+- Paperless billing ~66%
+- Payment evenly split between bank transfer (~36%) and credit card (~36%);
+  low share of electronic check (~20%)
+
+Interpretation:
+Established, high-investment customers with strong lock-in through long contracts and
+many services. High partner share and low senior share suggest an economically active
+life stage with a stable household. Despite high charges, churn is low — they are satisfied
+and have a lot to lose by switching. Priority: retain with proactive support
+and loyalty offers.
+
+---
+
+CLUSTER 1 — Low-Cost Customers Without Internet
+Size: 1,521 customers
+Churn rate: ~7%
+
+Key characteristics:
+Demographics:
+- Lowest share of seniors of all clusters (~3%) — markedly younger profile
+- Medium share with partner (~48%) and relatively high share with dependents (~42%)
+- Balanced gender split (49% female / 51% male)
+
+Services & contracts:
+- Medium tenure (~31 months)
+- Very low monthly charges (~21) and total charges (~667)
+- 100% without internet — phone-only subscriptions
+- All have phone service but low share of multiple lines (~22%)
+- No add-on services whatsoever (streaming, security, etc. = 0%)
+- Mixed contracts: two-year (~42%), month-to-month (~34%), one-year (~24%)
+
+Billing & payment:
+- Lowest paperless billing of all clusters (~29%) — prefer paper billing
+- High share of mailed check (~48%); low share of electronic check (~8%)
+
+Interpretation:
+The simplest possible service — phone only, no digital add-ons. The low
+senior share and high dependent share may indicate families with limited
+need for broadband (e.g. children covered by mobile plans). Low churn despite
+minimal engagement suggests they are satisfied. Mailed check and low paperless
+billing point to customers who prefer traditional channels. Cautious upselling
+of internet is possible, but avoid disrupting a stable customer group.
+
+---
+
+CLUSTER 2 — High-Risk Customers (Critical Risk Group)
+Size: 2,078 customers
+Churn rate: ~55%
+
+Key characteristics:
+Demographics:
+- Highest share of seniors of all clusters (~30%) — clear demographic risk
+- Lowest share with partner (~38%) and lowest share with dependents (~15%)
+- Balanced gender split (49% female / 51% male)
+
+Services & contracts:
+- Short tenure (~20 months)
+- High monthly charges (~86) but low total charges (~1,779) relative to the rate
+- Almost exclusively fiber optic (99.9%), none without internet
+- All have phone service (100%); 55% have multiple lines
+- Low share of security services: online security (~14%), tech support (~14%)
+- Moderate streaming (~45%) and backup/device protection (~30%)
+- Overwhelming share of month-to-month contracts (~97%)
+
+Billing & payment:
+- Highest paperless billing (~79%)
+- Dominant electronic check payers (~64%) — the strongest churn indicator
+- Low share of automatic payments (bank transfer ~14%, credit card ~12%)
+
+Interpretation:
+The clearest churn signal in the dataset. Fiber optic customers without contract
+lock-in who pay a lot but receive little added value (no security services, no support).
+High senior share combined with single-person households (low partner and dependent share)
+may indicate price-sensitive customers who actively compare alternatives. Electronic check
+is a known churn indicator — manual payment increases cost awareness
+every month. Highest priority for retention efforts: offer contract conversion
+and bundling of add-on services.
+
+---
+
+CLUSTER 3 — DSL Customers on Monthly Contracts
+Size: 1,675 customers
+Churn rate: ~26%
+
+Key characteristics:
+Demographics:
+- Low share of seniors (~11%)
+- Lowest share with partner (~36%) and medium share with dependents (~27%)
+- Balanced gender split (49% female / 51% male)
+
+Services & contracts:
+- Short tenure (~21 months)
+- Medium-high monthly charges (~51) and low total charges (~1,095)
+- All have DSL (100%), no fiber and no "no internet"
+- Lowest share of phone service of all clusters (~65%); low share of multiple lines (~15%)
+- Moderate add-on services: online security (~38%), tech support (~35%),
+  backup (~33%), device protection (~29%), streaming (~26–27%)
+- High share of month-to-month contracts (~72%), little two-year (~7%)
+
+Billing & payment:
+- Medium paperless billing (~55%)
+- Mixed payment: electronic check (~34%) and mailed check (~31%)
+- Low share of automatic payments (bank transfer ~17%, credit card ~18%)
+
+Interpretation:
+A middle category with a noticeably elevated churn risk. DSL customers with short tenures
+and monthly contracts — either newly acquired customers evaluating the service or
+dissatisfied customers who haven't upgraded to fiber. The lowest phone share suggests
+some customers may have chosen broadband only, without voice. Mixed payment profile with
+relatively high electronic check and mailed check points to manual payers with
+potentially high price awareness. Retention strategy: encourage longer contracts
+and more add-on services to increase stickiness.
+
+---
+
+OVERALL CONCLUSIONS
+=======================
+
+Churn ranking (highest to lowest):
+  Cluster 2 (~55%) > Cluster 3 (~26%) > Cluster 0 (~10%) > Cluster 1 (~7%)
+
+Strongest churn drivers identified:
+  1. Fiber optic + month-to-month contract (Cluster 2)
+  2. Short tenure (Clusters 2 and 3)
+  3. Electronic check as payment method (Clusters 2 and 3)
+  4. Absence of add-on services (Cluster 2)
+  5. High senior share + low partner/dependent share (Cluster 2) — single-person households
+
+Demographic observations:
+  - Gender has no distinguishing effect — evenly distributed across all clusters
+  - Seniors are heavily overrepresented in high-risk Cluster 2 (~30% vs ~3–16% in others)
+  - Partner and dependents co-vary with lower churn (Clusters 0 and 1)
+
+Recommended actions:
+  - Cluster 2: Urgent retention focus — offer contract conversion and bundling;
+               special attention to the senior segment
+  - Cluster 3: Upgrade incentives from monthly contracts; offer DSL→fiber campaigns
+  - Cluster 0: Reward loyalty, prevent passive attrition
+  - Cluster 1: Cautious upselling of internet services through traditional channels
