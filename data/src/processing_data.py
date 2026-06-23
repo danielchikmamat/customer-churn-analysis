@@ -101,12 +101,9 @@ def convert_yes_no_to_binary(df, binary_columns=["partner", "dependents", "phone
     print(f"Converted {binary_columns} to binary encoding.")
     return df
 
-def convert_gender_to_binary(df):
-    """Convert the 'gender' column to binary encoding, where 'female' is mapped to 1 and 'male' is mapped to 0."""
-    if "gender" in df.columns:
-        df["gender"] = df["gender"].map({"female": 1, "male": 0})
-        print("Converted 'gender' column to binary encoding.")
-    return df
+def convert_gender_to_one_hot(df):
+    """One-hot encode the 'gender' column."""
+    return convert_column_to_one_hot(df, "gender")
 
 def convert_senior_citizen_to_binary(df):
     """convert dtype from object to int."""
@@ -171,6 +168,7 @@ def processing(df):
         binary_columns = binary_encoding_columns(df)
         print(f"Columns suitable for binary encoding: {binary_columns}")
         df = convert_yes_no_to_binary(df)
+        df = convert_gender_to_one_hot(df)
 
         #convert 3 options to binary if dependent on internet service or phoneservice
         df = convert_multiple_lines_to_binary(df)
